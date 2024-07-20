@@ -181,9 +181,54 @@
               </div>
         </div>
     </div>
+    <section id="comparison">
+        <div class="container">
+            <!-- Kitchen Renovation -->
+            <div class="row align-items-center my-5">
+                <div class="col-md-6 position-relative overflow-hidden">
+                    <figure style="background-image: url('assets/kitchen-after.jpg');">
+                        <div style="background-image: url('assets/kitchen-before.jpg');" class="overlay"></div>
+                    </figure>
+                    <input type="range" min="0" max="100" value="50" oninput="moveSlider(this, 'kitchen')">
+                </div>
+                <div class="col-md-6">
+                    <h3>Kitchen Renovation</h3>
+                    <p>Before: Outdated kitchen with limited workspace.</p>
+                    <p>After: Modern kitchen with optimized space and improved lighting.</p>
+                </div>
+            </div>
+            <!-- Indoor Renovation -->
+            <div class="row align-items-center my-5">
+                <div class="col-md-6 order-md-2 position-relative overflow-hidden">
+                    <figure style="background-image: url('assets/indoor-after.jpg');">
+                        <div style="background-image: url('assets/indoor-before.jpg');" class="overlay"></div>
+                    </figure>
+                    <input type="range" min="0" max="100" value="50" oninput="moveSlider(this, 'indoor')">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h3>Indoor Renovation</h3>
+                    <p>Before: Dark and cramped living areas.</p>
+                    <p>After: Bright, spacious, and inviting living spaces.</p>
+                </div>
+            </div>
+            <!-- Bathroom Renovation -->
+            <div class="row align-items-center my-5">
+                <div class="col-md-6 position-relative overflow-hidden">
+                    <figure style="background-image: url('assets/bathroom-after.jpg');">
+                        <div style="background-image: url('assets/bathroom-before.jpg');" class="overlay"></div>
+                    </figure>
+                    <input type="range" min="0" max="100" value="50" oninput="moveSlider(this, 'bathroom')">
+                </div>
+                <div class="col-md-6">
+                    <h3>Bathroom Renovation</h3>
+                    <p>Before: Old-fashioned and inefficient bathroom layout.</p>
+                    <p>After: Sleek and functional design with modern fixtures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     
     
-
 
       <footer class="contact-section bg-dark text-white">
         <div class="container">
@@ -202,7 +247,25 @@
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Function to move the overlay based on the slider's value
+function moveSlider(slider, overlayDiv) {
+    overlayDiv.style.width = slider.value + '%';
+}
 
+// Attach the input event to all sliders in the comparison section
+document.addEventListener('DOMContentLoaded', function() {
+    var sliders = document.querySelectorAll('#comparison input[type="range"]');
+    sliders.forEach(function(slider) {
+        slider.addEventListener('input', function() {
+            var overlayDiv = this.parentElement.querySelector('.overlay');
+            moveSlider(this, overlayDiv);
+        });
+    });
+});
+</script>
+
+        
     
 </body>
 </html>
