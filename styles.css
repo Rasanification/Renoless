@@ -71,15 +71,15 @@ html {
     
     .title-static {
         font-family: 'Roboto', sans-serif;
-        font-weight: 900; /* Roboto Black */
+        font-weight: 500; /* Roboto Black */
         color: #fff; /* White color */
         margin-bottom: 0; /* No space below the main title */
-        font-size:7em;
+        font-size:64px;
     }
     
     .services-typed {
         font-family: 'Roboto', sans-serif; /* Consistent font family */
-        font-size: 3rem; /* Smaller size than the main title */
+        font-size: 32px; /* Smaller size than the main title */
         color: #fff; /* Light gray for less emphasis */
         display: inline-block; /* Aligns beside the main title */
         min-height:100px;
