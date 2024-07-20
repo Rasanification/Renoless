@@ -22,6 +22,100 @@ html {
         background: #131313;
       }
 
+
+
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+
+      .hero {
+        /* Apply both the gradient and image in separate layers */
+        background-image: 
+            linear-gradient(45deg, rgba(255, 140, 0, 0.5), rgba(0, 0, 0, 0.7)),
+            url('assets/hero-bg2.jpg');
+        
+        /* Gradient covers the full background and animates, image covers and centers */
+        background-size: 1000% 1000%, cover;
+        
+        /* Initial position of the gradient and centering the image */
+        background-position: 0% 50%, center center;
+        
+        /* No repeat for both layers */
+        background-repeat: no-repeat;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Full viewport height */
+        text-align: center;
+        padding: 20px; /* Add padding to prevent text touching the edges */
+    }
+    
+
+    @-webkit-keyframes gradientAnimation {
+        0%, 100% { background-position: 0% 50%, center center; }
+        50% { background-position: 100% 50%, center center; }
+    }
+    
+    @keyframes gradientAnimation {
+        0%, 100% { background-position: 0% 50%, center center; }
+        50% { background-position: 100% 50%, center center; }
+    }
+    
+    
+    /* Apply the animation to the .hero */
+    .hero {
+        -webkit-animation: gradientAnimation 10s ease infinite;
+        animation: gradientAnimation 10s ease infinite;
+    }
+    
+    
+    .title-static {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900; /* Roboto Black */
+        color: #fff; /* White color */
+        margin-bottom: 0; /* No space below the main title */
+        font-size:7em;
+    }
+    
+    .services-typed {
+        font-family: 'Roboto', sans-serif; /* Consistent font family */
+        font-size: 3rem; /* Smaller size than the main title */
+        color: #fff; /* Light gray for less emphasis */
+        display: inline-block; /* Aligns beside the main title */
+        min-height:100px;
+        text-align: center;
+        font-style:italic;
+    }
+    
+    
+.cover-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;  /* Adjust the height as needed */
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .cover-container {
+        height: auto;  /* Adjust height on smaller screens */
+        padding: 20px; /* Adds padding for better spacing */
+    }
+
+}
+
+.typed-cursor {
+    opacity: 0; 
+    visibility: hidden;  
+}
+
+
+
+
 .bg-black { background-color: #131313; }
 .bg-grey { background-color: #3c5050; }
 .text-white { color: white; }
@@ -30,11 +124,7 @@ html {
     /* Ensure your path to the image is correct */
 }
 
-.cover-container {
-    min-height: 100vh; /* Ensures it covers the full height of the viewport */
-    color: white; /* Text color */
-    padding: 0 15px; /* Optional: Adjusts padding */
-}
+
 
 
 .info-section {
@@ -57,6 +147,7 @@ html {
 
 .carousel {
     padding: 0 5%; /* Adjusts padding on both sides */
+    margin-top:20px;
 }
 
 .carousel-item img {
