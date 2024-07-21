@@ -1,0 +1,13 @@
+    <link rel="canonical" href="https://www.renolessconstruction.com/">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.renolessconstruction.com/">
+    <meta property="og:title" content="Renoless Construction | Quality Renovation and Construction Services">
+    <meta property="og:description" content="Specializing in high-quality renovations and construction projects, Renoless Construction is your premier partner for transforming spaces into dream places.">
+    <meta property="og:image" content="https://www.renolessconstruction.com/images/social-preview.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.renolessconstruction.com/">
+    <meta property="twitter:title" content="Renoless Construction | Quality Renovation and Construction Services">
+    <meta property="twitter:description" content="Specializing in high-quality renovations and construction projects, Renoless Construction is your premier partner for transforming spaces into dream places.">
+    <meta property="twitter:image" content="https://www.renolessconstruction.com/images/social-twitter-preview.png">
